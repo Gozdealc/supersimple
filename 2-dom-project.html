@@ -4,23 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
+    <style>
+
+      body {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+      }
+      .js-subscribe-button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 50px;
+      }
+
+      .is-subscribed {
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+      .cost-input {
+        padding: 10px;
+        font-size: 12px;
+      }
+      .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
     <p>Youtube Subscribe Button</p>
     <button onclick="
       subscribe();
-    " class="js-subscribe-button">Subscribe</button>
+    " class="js-subscribe-button is-subscribed">Subscribe</button>
 
     <p>Rock-Paper-Scissors</p>
     <a href="./4-rock-paper-scissors.html">Click Here</a>
 
     <p>Amazon Shipping Calculator</p>
-    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+    <input placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
       handleCostKeyDown(event);
     ">
     <button onclick="
       calculateTotal();
-    ">Calculate</button>
+     " class="calculate-button">Calculate</button>
     <p class="js-total-cost"></p>
 
     <script>
@@ -47,8 +77,11 @@
 
       if (buttonElement.innerHTML === 'Subscribe') {
         buttonElement.innerHTML = 'Subscribed';
+        //Farklı bir sınıf ekleyerek,butona tıklandığında stili değiştirrdik
+        buttonElement.classList.add('is-subscribed');
       } else {
         buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
       }
         }
     </script>
