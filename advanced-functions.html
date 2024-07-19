@@ -50,16 +50,44 @@
         */
 
         /////////// FOR EACH /////////////
-        /*
+        
         [
             'make dinner',
             'watch youtube',
             'wash dishes'
-        ].forEach(function(value, index) {
+        ].forEach((value, index) => {
+            if(value === 'make dinner') {
+                return;
+            }
             console.log(value);
             console.log(index);
         });
-        */
+
+        //////////////////////// ARROW FUNCTION //////////////////////
+
+        const arrowFunction = (param, param2) => {
+            console.log('Hello');
+            return 5;
+        };
+        arrowFunction();
+        
+        const regularFunction = (param, param2) => {
+            console.log('hello');
+            return 5;
+        };
+        regularFunction()
+
+        ////// Shorcuts, arrow functions ////////
+        // Bir adet parametre olduğunda parantez opsiyonel.
+
+        const oneParam = (param) => {
+            console.log(param+1);
+        };
+        oneParam(2);
+        
+        // Tek bir ok varsa otomatik döndürecek komutu (return yazmamıza da gerek yok)
+        const oneLine = () => 2+3;
+        console.log(oneLine());
 
     </script>
 </body>
