@@ -34,7 +34,7 @@ document.querySelectorAll('.js-delete-todo-button')
             renderTodoList();
     })
 });
-
+console.log(index);
 }
 
 
