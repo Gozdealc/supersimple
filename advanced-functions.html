@@ -6,7 +6,21 @@
     <title>Advanced Functions</title>
 </head>
 <body>
+    <button onclick="" class="js-button">Click</button>
     <script>
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            console.log('click');
+        }
+        //Aynı anda çalışıyor, butona tıkladığımızda
+        buttonElement.addEventListener('click', eventListener);
+
+        buttonElement.removeEventListener('click', eventListener);
+
+        buttonElement.addEventListener('click', () => {
+            console.log('click2');
+        })
         /*
         const function1 = function greeting() {
             console.log('Hello World');
@@ -50,7 +64,7 @@
         */
 
         /////////// FOR EACH /////////////
-        
+        /*
         [
             'make dinner',
             'watch youtube',
@@ -88,6 +102,18 @@
         // Tek bir ok varsa otomatik döndürecek komutu (return yazmamıza da gerek yok)
         const oneLine = () => 2+3;
         console.log(oneLine());
+
+        const object2 = {
+            method: () => {
+        
+        },
+         method() {
+
+         }
+        };
+        */
+
+
 
     </script>
 </body>
